@@ -1,0 +1,8 @@
+<div class="jumbotron text-center">
+    <h1>Favorite Recipes</h1>
+
+    <ul ng-controller="RecipeController as recipeCtrl">
+	 	<li ng-repeat="recipe in recipeCtrl.recipes">{{recipe.name}}</li>
+    </ul>
+
+</div>
