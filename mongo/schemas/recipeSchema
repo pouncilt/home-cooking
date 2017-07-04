@@ -1,0 +1,14 @@
+{
+	"name":"string",
+	"ingredients": {
+		"ingredient": ["string"]
+	},
+	"directions": {
+		"preparation_time":"number",
+		"cook_time":"number",
+		"ready_in": "number",
+		"direction": ["string"],
+	},
+	"tip":"string",
+	"notes":"string"
+}
