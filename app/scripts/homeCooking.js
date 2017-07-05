@@ -17,15 +17,15 @@ function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('Recipes', {
       url: '/recipes',
-      templateUrl: '../views/recipes.html'
+      templateUrl: '../app/views/recipes.html'
     })
     .state('Pantry',{
       uri: '/pantry',
-      templateUrl: '../views/pantry.html'
+      templateUrl: '../app/views/pantry.html'
     })
     .state('ShoppingList', {
       uri:'/shoppingList',
-      templateUrl: '../views/shoppingList.html'
+      templateUrl: '../app/views/shoppingList.html'
     });
   $urlRouterProvider.otherwise('home');
 }]);
