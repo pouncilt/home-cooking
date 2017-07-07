@@ -4,10 +4,14 @@ var cookingApp = angular.module('homeCooking', ['ui.router']);
 
 
 angular.module('homeCooking')
-.controller('RecipeController', function () {
+.controller('RecipeController', function ($http) {
     this.welcome = 'Enjoy some Home Cooking';
-    this.menuItems = ["Recipes", "Pantry","ShoppingList"];
-    this.recipes = ["Roasted Duck","Bacon Avocado Salad","Mongolian Beef from Slow Cooker"," San Francisco Pork Chops", "Peking Duck"];
+    this.menuItems = ['Recipes', 'Pantry','ShoppingList'];
+    //this.recipes = ['Roasted Duck','Bacon Avocado Salad','Mongolian Beef from Slow Cooker',' San Francisco Pork Chops', 'Peking Duck'];
+    // promise with anon callback
+    $http.get('recipedata').then( (response) => {
+    	this.recipes = response.data;
+    });
 });
 cookingApp.config([
 '$stateProvider',
